@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Note-Pad</h1>
+    <div class="content">
+
+        <form action="" id="add-note">
+
+            <input type="text" name="note" placeholder="Note">
+            <input type="text" name="time" placeholder="Time">
+            <button>Add Note</button>
+            
+        </form>
+
+
+        <ul id="note"></ul>
+
+    </div>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAqYbyW7SXynvSrtEYTu3BQXvAFdbsfPi8",
+            authDomain: "fir-6035a.firebaseapp.com",
+            projectId: "fir-6035a",
+            storageBucket: "fir-6035a.appspot.com",
+            messagingSenderId: "922061854512",
+            appId: "1:922061854512:web:6ae579f3988e3fef55daf5",
+            measurementId: "G-001GEVMD2Z"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
